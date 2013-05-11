@@ -71,11 +71,6 @@ class JobHandler(tornado.web.RequestHandler):
     coll.insert(contacts)
     self.redirect("/index")
     '''
-#class PaymentHandler(tornado.web.RequestHandler):
-# def post(self):
-#   payment_fields = ['id', 'card', 'created' , 'currency', 'livemode', 'object', 'used']
-#   coll = self.application.db.contact
-#   contacts = dict()
     
 if __name__=='__main__':
   tornado.options.parse_command_line()
