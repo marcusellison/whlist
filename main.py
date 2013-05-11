@@ -2,6 +2,7 @@
 import os
 import os.path
 import json
+import urlparse
 
 import tornado.httpserver
 import tornado.ioloop
@@ -37,7 +38,7 @@ class Application(web.Application):
 
     if MONGO_URL:
       # Get a connection
-      conn = pymongo.Connection(MONGO_URL)
+      conn = MongoClient(MONGO_URL)
       
       # Get the database
       db = conn[urlparse(MONGO_URL).path[1:]]
