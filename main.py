@@ -1,3 +1,5 @@
+
+import os
 import os.path
 import json
 
@@ -31,8 +33,19 @@ class Application(web.Application):
     debug=True,
     )
 
-    client = MongoClient("localhost", 27017)
-    self.db = client.wh_list
+    MONGO_URL = os.environ.get('MONGOHQ_URL')
+
+    if MONGO_URL:
+      # Get a connection
+      conn = pymongo.Connection(MONGO_URL)
+      
+      # Get the database
+      db = conn[urlparse(MONGO_URL).path[1:]]
+    else:
+      # Not on an app with the MongoHQ add-on, do some localhost action
+      conn = MongoClient("localhost", 27017)
+      self.db = conn['wh_list']
+    
     web.Application.__init__(self, handlers, **settings)  
 
 #code from other application that I have not yet switched out. Will need to think about how jobs get rendered.
