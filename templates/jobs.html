@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+
+{% block body %}
+
+<body>
+
+		<div class="container">
+			<a href="/">home</a>
+			<!-- <button class="post_job_button">Post a Job</button> -->
+			<h1>Freelance Jobs</h1>
+			<h2>10013</h2>
+
+			<div class="main_separator"></div>
+
+			{% for job in jobs %}
+				<dl>
+				
+				<dt>{{ job["title"] }}</dt>
+				<dd>
+					{% autoescape None %}
+					<p>{{ job["description"][0:200] }} ...</p>
+					<a id="job_url" href="{{ job["url"] }}">more</a>
+				</dd>
+				
+				</dl>
+			{% end %}
+
+		<footer>
+		</footer>
+	</div>
+</body>
+
+{% end %}

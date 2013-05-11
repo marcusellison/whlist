@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+
+{% block body %}
+
+<body>
+
+  <div class="container">
+    
+      <div class="homepage_container">
+        <!-- <button class="post_job_button">Post a Job</button> -->
+        <a href="/">home</a>
+      
+      
+            <h1>Freelance Creative Jobs</h1>
+      
+            <div class="benefits_container">
+              <ul>
+                <li>Local.</li>
+                <li>No Middlemen.</li>
+                <li>Thoughtfully Curated.</li>
+              </ul>
+            </div>
+      
+          <h3>Browse freelance jobs in your zipcode</h3>
+      
+          <form action="/jobs" method="post">
+            <label for="zipcode"></label>
+            <input name="zipcode" placeholder="your zipcode"><br>
+            <button class="view_job_button" type="submit">View Jobs</button>
+          </form>
+          <p class="form_error_message">Please enter a zipcode</p>
+        </div>
+        
+
+    <footer>
+    </footer>
+  </div>
+
+{% end %}

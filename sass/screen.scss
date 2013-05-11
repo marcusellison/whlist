@@ -1,0 +1,136 @@
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "base";
+
+@import "sassybuttons";
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+
+body{
+	background:#F7F3E8;
+	min-width: 320px;
+	font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; 
+	font-weight:200;
+	font-stretch:normal;
+  a { 
+		text-decoration: none;
+}
+	
+.container{
+	@include container($total-columns, $tablet, $computer);
+	@include susy-grid-background;
+	
+	#header {
+	 	font-weight: 700;
+		font-size: 72px;
+		span {
+	    font-weight: 300;
+	    font-size: 18px;
+	    display: block;
+		}
+	}
+}
+
+}
+
+.post_job_button {
+	@include sassy-button("simple", 6px, 14px, #337EC4);
+	float:right;
+	margin-bottom:20px;
+}
+	
+.view_job_button {
+	@include sassy-button("simple", 6px, 14px, #3BA06F);
+	float:right;
+	height:48px;
+	position:relative;
+	top:-20px;
+	width:130px;
+}
+
+
+input {
+	float: left;
+  font-size: 20px;
+  height: 40px;
+  line-height: 20px;
+  text-indent: 10px;
+  width: 170px;
+}
+
+
+h1 {
+	text-align:center;
+	clear:both;
+}
+
+h2 {
+	text-align:center;
+}
+
+h3 {
+	text-align:center;
+}
+
+dt {
+	font-weight:200;
+}
+
+dd {
+	margin:0px;
+}
+
+dd p {
+	color:hsl(0, 0%, 70%);
+	font-size:15px;
+	margin:0;
+	padding: 5px 0;
+}
+
+dl {
+	border-top: 1px solid hsl(0, 0%, 85%);
+	/* border-bottom: 1px solid hsl(0, 0%, 85%); */
+	padding:10px;
+	margin:0;
+}
+
+dl:hover {
+	background:hsl(207, 81%, 65%);
+	cursor:pointer;
+	dt {
+		color:white;
+	}
+}
+
+
+ul {
+	padding:0;
+	width:280px;
+	margin: 0 auto;
+	li {
+		list-style-type:none;
+		display: inline-block;
+		font-size:14px;
+	}
+}
+
+.benefits_container {
+	position:relative;
+}
+
+.coming_soon_message {
+	color: hsl(180, 100%, 27%);
+}
+
+.homepage_container {
+	margin:0 auto;
+	width: 370px;
+}
+
+.form_error_message {
+	color: red;
+  margin-top: 30px;
+  position: relative;
+}

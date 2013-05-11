@@ -1,0 +1,25 @@
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "susy";
+
+// ---------------------------------------------------------------------------
+// Grid
+
+//this is the default number of columns
+$total-columns: 5; 
+ 
+//width of each column
+$column-width   : 4rem; 
+ 
+//space between columns
+$gutter-width   : 1rem; 
+ 
+//space on the right and left of the grid
+$grid-padding   : $gutter-width;
+ 
+//alternative layout breakpoints
+$tablet: 8;
+$computer: 55rem 12;
+
+$show-grid-backgrounds  : false;

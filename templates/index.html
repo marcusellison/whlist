@@ -1,0 +1,104 @@
+<!doctype html>
+
+<head>
+<meta charset="utf-8">
+
+<title> {{ title }} </title>
+
+<meta name="description" content="A Curated Freelance Jobs List || Local. No Middlemen.">
+<meta name="author" content=" Marcus Ellison">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="{{ static_url("stylesheets/screen.css") }}">
+
+<!--[if (lt IE 9) & (!IEMobile)]>
+<script src="js/selectivizr-min.js"></script>
+<![endif]-->
+
+<!-- JavaScript -->
+<script src="static/js/modernizr-2.5.3-min.js"></script>
+
+<!-- For iPhone 4 -->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon.png"> -->
+<!-- For iPad 1-->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon.png"> -->
+<!-- For the new iPad -->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/h/apple-touch-icon-144x144-precomposed.png"> -->
+<!-- For iPhone 3G, iPod Touch and Android -->
+<!-- <link rel="apple-touch-icon-precomposed" href="img/l/apple-touch-icon-precomposed.png"> -->
+<!-- For Nokia -->
+<!-- <link rel="shortcut icon" href="img/l/apple-touch-icon.png"> -->
+<!-- For everything else -->
+<link rel="shortcut icon" href="/favicon.ico">
+
+<!--iOS -->
+<!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+<!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
+<!-- <link rel="apple-touch-startup-image" href="img/splash.png"> -->
+
+<!-- <script>(function(){var p,l,r=window.devicePixelRatio;if(navigator.platform==="iPad"){p=r===2?"img/startup/startup-tablet-portrait-retina.png":"img/startup/startup-tablet-portrait.png";l=r===2?"img/startup/startup-tablet-landscape-retina.png":"img/startup/startup-tablet-landscape.png";document.write('<link rel="apple-touch-startup-image" href="'+l+'" media="screen and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="'+p+'" media="screen and (orientation: portrait)"/>');}else{p=r===2?"img/startup/startup-retina.png":"img/startup/startup.png";document.write('<link rel="apple-touch-startup-image" href="'+p+'"/>');}})()</script> -->
+<!--Microsoft -->
+
+<!-- Prevents links from opening in mobile Safari -->
+<!-- <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script> -->
+<meta http-equiv="cleartype" content="on">
+
+<!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+mixpanel.init("493743f4e57b98c0c5535a003496968f");</script>
+<!-- end Mixpanel -->
+</head>
+
+{% block body %}
+<body>
+
+		<div class="container">
+			<div class="homepage_container">
+				<a href="/">home</a>
+				<!-- <button class="post_job_button">Post a Job</button> -->
+			
+			
+						<h1>Freelance Creative Jobs</h1>
+			
+						<div class="benefits_container">
+							<ul>
+								<li>Local.</li>
+								<li>No Middlemen.</li>
+								<li>Thoughtfully Curated.</li>
+							</ul>
+						</div>
+			
+					<h3>Browse freelance jobs in your zipcode</h3>
+			
+					<form id="view_jobs" action="/jobs" method="post">
+						<label for="zipcode"></label>
+						<input name="zipcode" placeholder="your zipcode"><br>
+						<button class="view_job_button" type="submit">View Jobs</button>
+					</form>
+				</div>
+
+		<footer>
+		</footer>
+	</div>
+	{% end %}
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+
+<!--<script src="static/js/plugins.js"></script>-->
+<script src="static/js/script.js"></script>
+<script src="static/js/helper.js"></script>
+<script>
+var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+s.parentNode.insertBefore(g,s)}(document,"script"));
+</script>
+</body>
+</html>
