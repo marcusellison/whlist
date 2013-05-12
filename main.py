@@ -2,7 +2,7 @@
 import os
 import os.path
 import json
-import urlparse
+from urlparse import urlparse
 
 import tornado.httpserver
 import tornado.ioloop
@@ -38,14 +38,14 @@ class Application(web.Application):
 
     if MONGO_URL:
       # Get a connection
-      conn = MongoClient(MONGO_URL)
+      self.conn = MongoClient(MONGO_URL)
       
       # Get the database
-      db = conn[urlparse(MONGO_URL).path[1:]]
+      self.db = self.conn[urlparse(MONGO_URL).path[1:]]
     else:
       # Not on an app with the MongoHQ add-on, do some localhost action
-      conn = MongoClient("localhost", 27017)
-      self.db = conn['wh_list']
+      self.conn = MongoClient("localhost", 27017)
+      self.db = self.conn['wh_list']
     
     web.Application.__init__(self, handlers, **settings)  
 
