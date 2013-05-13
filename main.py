@@ -18,7 +18,7 @@ from tornado.options import define, options
 #from HTMLParser import HTMLParser (I don't think this links to anything but I forget)
 from controllers import *
 
-define("port", default=8000, help="run on the given port", type=int)
+define("port", default=5000, help="run on the given port", type=int)
 
 class Application(web.Application):
   def __init__(self):
@@ -76,7 +76,7 @@ class JobHandler(tornado.web.RequestHandler):
 if __name__=='__main__':
   tornado.options.parse_command_line()
   http_server = tornado.httpserver.HTTPServer(Application())
-  http_server.listen(options.port)
+  http_server.listen(os.environ.get("PORT", 5000))
   tornado.ioloop.IOLoop.instance().start()
 
 
