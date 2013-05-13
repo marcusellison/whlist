@@ -1,3 +1,4 @@
+newrelic
 beautifulsoup4==4.1.3
 nose==1.3.0
 pymongo==2.5
