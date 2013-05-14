@@ -243,36 +243,36 @@ dl {
   margin: 0;
 }
 
-/* line 108, ../../sass/screen.scss */
+/* line 107, ../../sass/screen.scss */
 ul {
   padding: 0;
   width: 280px;
   margin: 0 auto;
 }
-/* line 112, ../../sass/screen.scss */
+/* line 111, ../../sass/screen.scss */
 ul li {
   list-style-type: none;
   display: inline-block;
   font-size: 14px;
 }
 
-/* line 119, ../../sass/screen.scss */
+/* line 118, ../../sass/screen.scss */
 .benefits_container {
   position: relative;
 }
 
-/* line 123, ../../sass/screen.scss */
+/* line 122, ../../sass/screen.scss */
 .coming_soon_message {
   color: #008a8a;
 }
 
-/* line 127, ../../sass/screen.scss */
+/* line 126, ../../sass/screen.scss */
 .homepage_container {
   margin: 0 auto;
   width: 370px;
 }
 
-/* line 132, ../../sass/screen.scss */
+/* line 131, ../../sass/screen.scss */
 .form_error_message {
   color: red;
   margin-top: 30px;
