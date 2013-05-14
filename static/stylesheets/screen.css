@@ -243,16 +243,6 @@ dl {
   margin: 0;
 }
 
-/* line 99, ../../sass/screen.scss */
-dl:hover {
-  background: #5dadee;
-  cursor: pointer;
-}
-/* line 102, ../../sass/screen.scss */
-dl:hover dt {
-  color: white;
-}
-
 /* line 108, ../../sass/screen.scss */
 ul {
   padding: 0;

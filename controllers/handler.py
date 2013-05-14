@@ -18,6 +18,7 @@ class MainHandler(web.RequestHandler):
 
 class JobHandler(web.RequestHandler):
   def post(self):
+
     try:
       zipcode = int(self.get_argument('zipcode'))
       if nyc_zipcode(zipcode):
@@ -26,17 +27,18 @@ class JobHandler(web.RequestHandler):
         self.render(
          "jobs.html",
           title = "WHListed",
-          jobs = jobs
+          jobs = jobs,
+          zipcode = zipcode
         )
       else:
         self.render(
           "coming_soon.html",
-          title="WHListed"
+          title="WHListed",
         )
     except ValueError:
       self.render(
           "form_error.html",
-          title="WHListed"
+          title="WHListed",
         )
 
     
