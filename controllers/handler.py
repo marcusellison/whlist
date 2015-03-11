@@ -33,12 +33,12 @@ class JobHandler(web.RequestHandler):
       else:
         self.render(
           "coming_soon.html",
-          title="WHListed",
+          title="WHListed"
         )
     except ValueError:
       self.render(
           "form_error.html",
-          title="WHListed",
+          title="WHListed"
         )
 
     
